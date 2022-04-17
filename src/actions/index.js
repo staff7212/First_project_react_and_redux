@@ -36,10 +36,10 @@ export const filtersFetchingError = () => {
   };
 };
 
-export const activeFilterChanged = (name) => {
+export const activeFilterChanged = (filter) => {
   return {
     type: 'ACTIVE_FILTERS_CHANGED',
-    payload: name
+    payload: filter
   };
 };
 

@@ -2,6 +2,7 @@ import {useHttp} from '../../hooks/http.hook';
 import { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition, TransitionGroup} from 'react-transition-group';
+import { createSelector } from 'reselect';
 
 import { heroesFetching, heroesFetched, heroesFetchingError, heroDeleted } from '../../actions';
 import HeroesListItem from "../heroesListItem/HeroesListItem";
@@ -15,15 +16,23 @@ import './heroesList.scss'
 // Удаление идет и с json файла при помощи метода DELETE
 
 const HeroesList = () => {
-  const filteredHeroes = useSelector(state => {
-    if (state.activeFilter === 'all') {
-      return state.heroes;
-    } else {
-      return state.heroes.filter(el => el.element === state.activeFilter);
-    }
-  })
 
-  const {heroesLoadingStatus} = useSelector(state => state);
+  const filteredHeroesSelector = createSelector(
+    (state) => state.filters.activeFilter,
+    (state) => state.heroes.heroes,
+    (filter, heroes) => {
+      if (filter === 'all') {
+        console.log('render');
+        return heroes;
+      } else {
+        return heroes.filter(item => item.element === filter);
+      }
+    }
+  );
+
+  const filteredHeroes = useSelector(filteredHeroesSelector)
+
+  const {heroesLoadingStatus} = useSelector(state => state.heroes);
   const dispatch = useDispatch();
   const {request} = useHttp();
   
@@ -63,7 +72,7 @@ const HeroesList = () => {
     return arr.map(({id, ...props}) => {
       return (
         <CSSTransition
-          id={id}
+          key={id}
           timeout={500}
           classNames="hero">
 

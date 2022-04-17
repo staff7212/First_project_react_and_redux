@@ -10,7 +10,7 @@
       "id": 2,
       "name": "Неизвестный герой",
       "description": "Скрывающийся в тени",
-      "element": "wind"
+      "element": "air"
     },
     {
       "id": 3,
@@ -48,8 +48,8 @@
       "className": "btn-primary"
     },
     {
-      "name": "wind",
-      "label": "Ветер",
+      "name": "air",
+      "label": "Воздух",
       "className": "btn-success"
     },
     {
