@@ -22,7 +22,7 @@ const HeroesList = () => {
     (state) => state.heroes.heroes,
     (filter, heroes) => {
       if (filter === 'all') {
-        console.log('render');
+        //console.log('render');
         return heroes;
       } else {
         return heroes.filter(item => item.element === filter);
@@ -37,7 +37,7 @@ const HeroesList = () => {
   const {request} = useHttp();
   
   useEffect(() => {
-    dispatch(heroesFetching());
+    dispatch('HEROES_FETCHING');
     request("http://localhost:3001/heroes")
     .then(data => dispatch(heroesFetched(data)))
     .catch(() => dispatch(heroesFetchingError()))
