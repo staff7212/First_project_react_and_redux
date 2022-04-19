@@ -23,6 +23,18 @@
       "name": "Савелий",
       "description": "ijijijijij",
       "element": "air"
+    },
+    {
+      "id": "fe07ab65-6505-4eab-8c17-74c6bb6a7cce",
+      "name": "12345",
+      "description": "huhuhuhuhu",
+      "element": "fire"
+    },
+    {
+      "id": "3b440b78-62a1-41bc-8f8f-bff36d92ce76",
+      "name": "qwerty",
+      "description": "1234567890",
+      "element": "earth"
     }
   ],
   "filters": [

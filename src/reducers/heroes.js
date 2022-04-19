@@ -1,3 +1,6 @@
+//////////////////
+// // функция createSlice() заменила этот файл
+
 
 import { createReducer } from "@reduxjs/toolkit";
 

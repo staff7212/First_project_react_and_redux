@@ -1,3 +1,6 @@
+//////////////////
+// // функция createSlice() заменила этот файл
+
 const initialState = {
   filters: [],
   filtersLoadingStatus: 'idle',
