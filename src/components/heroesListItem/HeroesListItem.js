@@ -10,7 +10,7 @@ const HeroesListItem = ({name, description, element, deleteHeroes}) => {
         case 'water':
             elementClassName = 'bg-primary bg-gradient';
             break;
-        case 'wind':
+        case 'air':
             elementClassName = 'bg-success bg-gradient';
             break;
         case 'earth':
