@@ -1,4 +1,8 @@
 
+//////////////////
+// // функция createAsuncThunk() заменила этот файл
+
+
 import { createAction } from "@reduxjs/toolkit";
 import {  heroesFetching, heroesFetched, heroesFetchingError } from '../components/heroesList/heroesSlice';
 import { filtersFetching, filtersFetched, filtersFetchingError } from '../components/heroesFilters/filtersSlice';

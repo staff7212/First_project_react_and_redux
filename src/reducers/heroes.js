@@ -18,6 +18,9 @@ const initialState = {
   heroesLoadingStatus: 'idle',
 };
 
+// три варианта написания reducer
+
+// 1
 // только с JS, с TS работать не будет
 const heroes = createReducer(initialState, {
   [heroesFetching]: state => {
@@ -41,6 +44,7 @@ const heroes = createReducer(initialState, {
   state => state
 );
 
+// 2
 // const heroes = createReducer(initialState, builder => {
 //   builder
 //     .addCase(heroesFetching, state => {
@@ -62,7 +66,7 @@ const heroes = createReducer(initialState, {
 //     .addDefaultCase(() => {})
 // })
 
-
+// 3
 // const heroes = (state = initialState, action) => {
 //   switch (action.type) {
 //     case 'HEROES_FETCHING':
