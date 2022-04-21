@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { useHttp } from '../../hooks/http.hook';
 import { heroCreated } from '../heroesList/heroesSlice';
+import { selectAll } from '../heroesFilters/filtersSlice';
+import store from '../../store';
 
 
 // Задача для этого компонента:
@@ -21,7 +23,8 @@ const HeroesAddForm = () => {
   const [heroName, setHeroName] = useState('');
   const [heroDesc, setHeroDesc] = useState('');
   const [heroElement, setHeroElement] = useState('');
-  const {filters, filtersLoadingStatus} = useSelector(state => state.filters);
+  const {filtersLoadingStatus} = useSelector(state => state.filters);
+  const filters = selectAll(store.getState());
 
   const {request} = useHttp();
   const dispatch = useDispatch();

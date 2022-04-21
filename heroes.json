@@ -1,64 +1,57 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Первый герой",
-      "description": "Первый герой в рейтинге!",
+      "id": "73cf3cdd-9d6d-4d5f-8ec4-b507fe83f87d",
+      "name": "Первый",
+      "description": "Первый",
       "element": "fire"
     },
     {
-      "id": 2,
-      "name": "Неизвестный герой",
-      "description": "Скрывающийся в тени",
-      "element": "air"
-    },
-    {
-      "id": 3,
-      "name": "Морской герой",
-      "description": "Как аквамен, но не из DC",
+      "id": "71e3d1b5-2243-40b1-8833-65b36c08ddbc",
+      "name": "Второй ",
+      "description": "Второй",
       "element": "water"
     },
     {
-      "id": "925dcefa-fb7d-4df4-b881-6f1ec0540fad",
-      "name": "Савелий",
-      "description": "ijijijijij",
+      "id": "bf0d0aad-4a1c-4b0f-8a27-c927d9e4266a",
+      "name": "Третий",
+      "description": "Третий",
       "element": "air"
     },
     {
-      "id": "fe07ab65-6505-4eab-8c17-74c6bb6a7cce",
-      "name": "12345",
-      "description": "huhuhuhuhu",
-      "element": "fire"
-    },
-    {
-      "id": "4b760a7b-74cd-41cf-8747-02c939235c81",
-      "name": "Савелий",
-      "description": "huhuh",
-      "element": "fire"
+      "id": "42032227-28ce-4aca-9e55-b368da816070",
+      "name": "Четвертый",
+      "description": "Четвертый",
+      "element": "earth"
     }
   ],
   "filters": [
     {
+      "id": "all",
       "name": "all",
       "label": "Все",
       "className": "btn-outline-dark"
     },
     {
+      "id": "fire",
       "name": "fire",
       "label": "Огонь",
       "className": "btn-danger"
     },
     {
+      "id": "water",
       "name": "water",
       "label": "Вода",
       "className": "btn-primary"
     },
     {
+      "id": "air",
       "name": "air",
       "label": "Воздух",
       "className": "btn-success"
     },
     {
+      "id": "earth",
       "name": "earth",
       "label": "Земля",
       "className": "btn-secondary"
